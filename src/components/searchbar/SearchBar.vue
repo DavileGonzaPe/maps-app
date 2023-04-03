@@ -1,6 +1,3 @@
-
-import SearchResults from '../search-result/SearchResults';
-
 <script lang="ts" src="./SearchBar.ts"/>
 
 <template>
@@ -9,6 +6,7 @@ import SearchResults from '../search-result/SearchResults';
         class="form-control" 
         type="text"
         placeholder="Buscar lugares..."
+        v-model="searchTerm"
         >
         <SearchResults/>
         
