@@ -29,8 +29,8 @@ export default defineComponent ({
                 
                 const myLocationMarker = new Mapboxgl.Marker()
                     .setLngLat( userLocation.value )
-                    .addTo( map )
-                    .setPopup( myLocationPopup );
+                    .setPopup( myLocationPopup )
+                    .addTo( map );
 
                 setMap( map );
             }

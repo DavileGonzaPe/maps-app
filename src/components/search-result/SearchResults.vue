@@ -9,11 +9,18 @@
         class="list-group mt-3">
             <li v-for="place in places" 
                 :key="place.id"
-                class="list-group-item list-group-item-action">
+                class="list-group-item list-group-item-action"
+                :class="{ 'active': place.id === activePlace }"
+                @click="onPlaceClicked( place )"
+            >
                 <h5>{{ place.text }}</h5>
                 <p>{{ place.place_name }}</p>
                 <div class="float-end">
-                    <button class="btn btn-outline-primary btn-sm">
+                    <button 
+                        class="btn btn-outline-primary btn-sm"
+                        :class="( place.id === activePlace ) ? 'btn-outline-light' : 'btn-outline-primary'"
+                        @click.self="getRouteDirections( place )"
+                    >
                         Direcciones
                     </button>
                 </div>
