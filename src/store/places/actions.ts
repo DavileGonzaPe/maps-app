@@ -14,6 +14,10 @@ const actions: ActionTree<PlacesState, StateInterface> = {
                 
             }
         );
+    },
+
+    async searchPlacesByTerm({ commit, state }, query: string) {
+        console.log('Vuex: ' + query);
     }
 }
 
