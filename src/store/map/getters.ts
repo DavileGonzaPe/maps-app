@@ -4,8 +4,8 @@ import { StateInterface } from '../index';
 
 
 const getters: GetterTree<MapSate, StateInterface> = {
-    someGetter( /* state */ ) {
-        // return true;
+    isMapReady( state ) {
+        return !!state.map;
     }
 }
 
