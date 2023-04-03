@@ -16,9 +16,21 @@ export default defineComponent ({
                     style: 'mapbox://styles/mapbox/streets-v12', // style URL
                     center: userLocation.value, // starting position [lng, lat]
                     zoom: 15, // starting zoom
-                    });
+                });
+                
+                const myLocationPopup = new Mapboxgl.Popup()
+                    .setLngLat( userLocation.value )
+                    .setHTML(`
+                        <h4>Aquí estoy</h4>
+                        <p>Borreiros city</p>
+                        <p>${ userLocation.value }</p>
+                    `)                
+                
+                const myLocationMarker = new Mapboxgl.Marker()
+                    .setLngLat( userLocation.value )
+                    .addTo( map )
+                    .setPopup( myLocationPopup );
             }
-            
         }
 
         onMounted(() => {
