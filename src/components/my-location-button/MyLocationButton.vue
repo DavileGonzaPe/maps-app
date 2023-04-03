@@ -31,7 +31,7 @@ export default defineComponent({
 });
 </script>
 
-<style scope>
+<style scoped>
 button {
     position: fixed;
     top: 30px;
