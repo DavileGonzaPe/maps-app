@@ -15,7 +15,7 @@ export default defineComponent ({
                     container: mapElement.value, // container ID
                     style: 'mapbox://styles/mapbox/streets-v12', // style URL
                     center: userLocation.value, // starting position [lng, lat]
-                    zoom: 15, // starting zoom
+                    zoom: 12, // starting zoom
                 });
                 
                 const myLocationPopup = new Mapboxgl.Popup()
